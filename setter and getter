@@ -1,0 +1,43 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+static int i = 0;
+class Student{
+    private:
+    int rollNo;
+    char name[20];
+    public:
+    void setrollNo(){
+        rollNo = ++i;
+    }
+    int getrollNo(){
+        return rollNo; 
+    
+    }
+    void setName(char *nme){
+        strcpy(name,nme);
+        
+    }
+    char *getName(){
+        return name;
+    }
+};
+int main(){
+    Student s1,s2;
+    
+    s1.setrollNo();
+    s2.setrollNo();
+    
+    char temp[20];
+    cin>>temp;
+    
+    s1.setName(temp);
+    cin>>temp;
+    s2.setName(temp);
+    
+    
+    cout<<"the roll number of   "<<s1.getName()<<" is "<<s1.getrollNo()<<endl;
+    cout<<"the roll number of of  "<<s2.getName()<<" is "<<s2.getrollNo();
+    
+}
