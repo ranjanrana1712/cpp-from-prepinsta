@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+//Class name is point
+ class point{
+     private:
+     int x,y;
+     public:
+     //constructor have same name as class name
+     point(int x1,int y1){
+         x=x1;
+         y=y1;
+     }
+     //using getter to return x and y
+     int getx(){
+         return x;
+     }
+     int gety(){
+         return y;
+     }
+     
+ };
+ int main(){
+     //creating an instance to access the constructor
+     //p1 
+     point p1(10,20);
+     cout<<p1.getx()<<endl<<p1.gety();
+     
+     
+ }
+ 
+ //output is 10 and 20
