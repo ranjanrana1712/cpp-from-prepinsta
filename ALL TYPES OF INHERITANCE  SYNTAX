@@ -1,0 +1,73 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+// Single level inheritance 
+
+class A{
+}
+    
+class B:public B{
+    
+}
+
+//multilevel inheritance 
+
+class A{
+    
+}
+class B:public A{
+    
+}
+class C:public B{
+    
+}
+//multiple inheritance
+// 3 parent class and 1 child class
+
+class p1{
+    
+}
+class p2{
+    
+}
+class p3{
+    
+}
+Class A:public p1,public p2,public p3;
+
+//hierarchial inheritance
+// 1 parent class and 3 child class
+class parent {
+    
+}
+class A:parent {
+    
+}
+class B:parent {
+    
+}
+class C:parent{
+    
+};
+// hybrid class
+class A{
+    
+}
+class b:A{
+    
+}
+class c:A{
+    
+}
+class d:public b, public c{
+    ;
+}
+
+
+
+
+
+int main() {
+  
+
+    return 0;
+}
