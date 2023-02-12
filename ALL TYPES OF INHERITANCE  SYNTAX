@@ -71,3 +71,76 @@ int main() {
 
     return 0;
 }
+
+
+**************************************************************************************************************************
+
+//inheritance and access spcecifier part 4
+
+//  PROTECTED AND PRIVATE DONT GET INHERITED IN CHILD CLASS
+#include<iostream>
+using namespace std;
+class A{
+    public://accessed outside of class
+    int x;
+    
+    protected://not accessed outside of class
+    int y;
+    
+    private://not accessed outside of class
+    int z;
+    
+    // x y z are accessed within the classs
+    
+}
+class B : public A{
+    //x is inherited & stays public in child class
+    //y is inherited & stays protected in child class
+    //z is not inherited because it is private
+}
+class C : protected A {
+    //x is inherited & becomes protected 
+    //y is inherited & stays protected
+    
+}
+class D : private A{
+    //x is inherited & becomes private
+    //y is inherited & becomes private
+}
+int main(){
+    
+    A a;
+    B b;
+    C c;
+    D d;
+    
+    a.x=1;//it works becasue x is public
+    a.y=1;//it does not work because it protected
+    a.z=1;//it does not work because it is private
+    
+    b.x=1;//it works becasue x is public
+    b.y=1;//it does not work because it protected in class B
+    b.z=1;//it does not work because it is private
+    
+    c.x=1;//it does not work because it is protected 
+    c.y=1;//it does not work because it is protected
+    c.z=1;//it does not work because it is not inherited
+    
+    d.x=1;//it does not work because it is protected 
+    d.y=1;//it does not work because it is protected 
+    d.z=1;//it does not work because it is not inherited
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
